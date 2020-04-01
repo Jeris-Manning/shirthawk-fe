@@ -6,7 +6,7 @@ const HandleScalableMockup = async (garment, setGarment) => {
     try {
       const data = await scalableData(garment);
       const shirtImage = await axios.post(
-        "https://merchdropper-production.herokuapp.com/api/products/mockup",
+        "https://shirthawk.herokuapp.com/api/products/mockup",
         data,
         {
           headers: {
