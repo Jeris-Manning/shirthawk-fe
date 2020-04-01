@@ -16,9 +16,9 @@ const AddProduct = async (garment) => {
   await (async () => {
     const cloudRes = await axios
       .post(
-        "https://api.cloudinary.com/v1_1/dze74ofbf/upload",
+        "https://api.cloudinary.com/v1_1/ddgiykavr/upload",
         {
-          "upload_preset": "cropShrink",
+          "upload_preset": "crop-shrink",
           "tags": "browser_upload",
           "file": garment.mockUrl
         },
@@ -28,7 +28,7 @@ const AddProduct = async (garment) => {
         console.log("error uploading image", err);
       });
     const merchDropRes = await axios
-      .post("https://merchdropper-production.herokuapp.com/api/products", {
+      .post("https://shirthawk.herokuapp.com/api/products", {
         ...product,
         fullSizeURL: cloudRes.data.eager[0].secure_url,
         thumbnailURL: cloudRes.data.eager[1].secure_url
