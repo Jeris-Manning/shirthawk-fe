@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 const ImageUpload = ({ design, setDesign, designAdded, setDesignAdded }) => {
   let widget = window.cloudinary.createUploadWidget(
     {
-      cloudName: "dze74ofbf",
+      cloudName: "ddgiykavr",
       uploadPreset: "logoFromWidget",
       sources: ["local", "url"],
       showAdvancedOptions: false,
