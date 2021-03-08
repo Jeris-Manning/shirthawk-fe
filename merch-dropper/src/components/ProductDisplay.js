@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import NavBar from "./NavBar";
 import ProductCard from "./ProductCard";
 import { connect } from "react-redux";
 import { addToCart } from "../store/actions";

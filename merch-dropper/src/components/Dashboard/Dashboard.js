@@ -3,7 +3,7 @@ import SideBar from './SideBar';
 import Chart from './Chart';
 import { StyledDiv, BigContainer } from './Styled';
 
-const Dashboard = (props) => {
+const Dashboard = () => {
     return (
         <BigContainer className="dashboard-container">
             <div className="user-info">
