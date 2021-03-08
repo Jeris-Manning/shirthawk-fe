@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { postUser } from '../../store/actions';
-import { useAuth0 } from './Auth';
 import {
     StyledHeader,
     SignUpBox,
