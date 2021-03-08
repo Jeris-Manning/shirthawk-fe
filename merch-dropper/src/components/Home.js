@@ -9,7 +9,6 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
   Jumbotron,
   Container,
   Media

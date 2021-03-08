@@ -15,7 +15,7 @@ const DesignHandler = ({ design, setDesign, setThumbRender }) => {
         setThumbRender(res);
       }
     })();
-  }, [designAdded]);
+  }, [designAdded, setThumbRender, design]);
   return (
     <Fragment>
       <CloudinaryWidget
