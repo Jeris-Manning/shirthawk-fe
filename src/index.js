@@ -6,13 +6,10 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Auth0Provider } from "./components/Auth/Auth";
 import history from './utils/history.js';
 import config from './components/Auth/auth_config.json';
-
 import { store, persistor } from './store/store';
-
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -40,7 +37,5 @@ ReactDOM.render(
         </BrowserRouter>
     </Provider>, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+
