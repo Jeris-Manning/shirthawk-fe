@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -6,15 +6,7 @@ import CartIcon from "./Cart/CartIcon.js";
 import CartDropDown from "./Cart/CartDropDown";
 import ant from "../assets/MerchDropperLogo.jpg";
 
-const imgStyle = {
-  maxHeight: 45,
-  maxWidth: 45,
-  borderRadius: 10,
-};
-
 const NavBar = ({ hidden, history }) => {
-  let sideDrawer;
-
   return (
     <div>
       <DesktopWrapper>
@@ -88,7 +80,8 @@ export const DesktopWrapper = styled.div`
   background: white;
   width: 100%;
   @media (max-width: 550px) {
-padding: 2px;  }
+    padding: 2px;
+  }
 `;
 export const MobileWrapper = styled.div`
   display: none;
@@ -135,9 +128,9 @@ export const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
- .buyButton {
-  margin-left: 5px;
- }
+  .buyButton {
+    margin-left: 5px;
+  }
   @media (max-width: 649px) {
     display: none;
   }
@@ -150,8 +143,8 @@ export const MobileButtonWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   .buyButton {
-   margin-left: 8px;
- }
+    margin-left: 8px;
+  }
   @media (min-width: 650px) {
     display: none;
   }

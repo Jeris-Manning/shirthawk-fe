@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 
-import MerchDropperLogo from "../assets/MerchDropperLogo.JPG";
+import MerchDropperLogo from "../assets/MerchDropperLogo.jpg";
 
 const StripeCheckoutButton = ({ price, history }) => {
   const priceForStripe = price * 100;

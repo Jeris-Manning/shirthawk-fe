@@ -1,14 +1,10 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
-import { MediaWrapper } from "./NavBar";
-import { Media, NavbarText } from "reactstrap";
+
 
 const SideDrawer = ({
   closeDrawer,
-  imgStyle,
-  logoutWithRedirect,
-  customLogin,
   history,
 }) => {
   return (
