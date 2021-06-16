@@ -1,57 +1,47 @@
-import React from 'react';
-import styled from 'styled-components';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-
-import { toggleCartHidden } from '../../store/actions';
-// import { selectCartItemsCount } from '../Selectors/cart.selectors';
-
-import { ReactComponent as ShoppingIcon } from '../../assets/ShoppingIcon.svg';
+import React from "react";
+import styled from "styled-components";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { toggleCartHidden } from "../../store/actions";
+import { ReactComponent as ShoppingIcon } from "../../assets/ShoppingIcon.svg";
 
 const IconWrapper = styled.div`
-    width: 45px;
-    height: 45px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-`
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`;
 
 const Icon = styled(ShoppingIcon)`
-    width: 30px;
-    height: 30px;
-    @media (max-width: 768px) {
-        margin-top: 0.5rem;        
-        width: 40px;
-        height: 40px;
-    }
-`
+  width: 30px;
+  height: 30px;
+`;
 
 const ItemCount = styled.span`
-    position: absolute;
-    font-size: 15px;
-    font-weight: bold;
-    bottom: 12px;
-`
-
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  bottom: 12px;
+`;
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => {
+  return (
+    <IconWrapper onClick={toggleCartHidden}>
+      <Icon />
+      <ItemCount>{itemCount}</ItemCount>
+    </IconWrapper>
+  );
+};
 
-    return (
-        <IconWrapper onClick={toggleCartHidden}>
-            <Icon />
-            <ItemCount>{itemCount}</ItemCount>
-        </IconWrapper>
-    )
-}
-
-const mapDispatchToProps = dispatch => ({
-    toggleCartHidden: () => dispatch(toggleCartHidden())
+const mapDispatchToProps = (dispatch) => ({
+  toggleCartHidden: () => dispatch(toggleCartHidden()),
 });
 
 const mapStateToProps = createStructuredSelector({
-    //itemCount: selectCartItemsCount
-})
+  //itemCount: selectCartItemsCount
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
