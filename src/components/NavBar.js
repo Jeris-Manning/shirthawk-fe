@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import CartIcon from "./Cart/CartIcon.js";
 import CartDropDown from "./Cart/CartDropDown";
-import ant from "../assets/MerchDropperLogo.jpg";
+import ant from "../images/merch.jpg";
 
 const NavBar = ({ hidden, history }) => {
   return (

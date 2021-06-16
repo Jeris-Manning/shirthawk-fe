@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 
-import MerchDropperLogo from "../assets/MerchDropperLogo.jpg";
+import ant from "../images/merch.jpg";
 
 const StripeCheckoutButton = ({ price, history }) => {
   const priceForStripe = price * 100;
@@ -12,23 +12,23 @@ const StripeCheckoutButton = ({ price, history }) => {
 
   let config = {
     headers: {
-      "Content-Type": "application/json"
-    }
+      "Content-Type": "application/json",
+    },
   };
 
-  const onToken = token => {
+  const onToken = (token) => {
     console.log(token);
     axios
       .post("https://shirthawk.herokuapp.com/api/payments/", {
         amount: priceForStripe,
         token,
-        config
+        config,
       })
-      .then(function() {
+      .then(function () {
         alert("payment successful");
         history.push("/products");
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("payment error", error);
         alert("There was an issue with your payment.");
       });
@@ -40,7 +40,7 @@ const StripeCheckoutButton = ({ price, history }) => {
       name="MerchDropper"
       billingAddress
       shippingAddress
-      image={`${MerchDropperLogo}`}
+      image={`${ant}`}
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
