@@ -17,7 +17,6 @@ function App() {
       <NavBar />
       <Route exact path="/" component={Home} />
       <Route exact path="/cart" component={ShoppingCart} />
-      {/*<Route exact path="/callback" component={Callback} />*/}
       <Route exact path="/checkout" component={CheckoutPage} />
       <Route
         exact
