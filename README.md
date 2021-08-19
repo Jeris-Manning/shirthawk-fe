@@ -1,53 +1,41 @@
 # Merch Dropper
 
 
-## Contributors
 
-
-|                                       [Jennie Van](https://github.com/yennilee)                                      |                                       [Daniel Ajadi](https://github.com/theolamide)                                        |                                       [Jerris Manning](https://github.com/jeris-manning)                                        |                                       [Marcos Lira](https://github.com/Mlira02)                                        |                                       [Tristan Boudreau](https://github.com/tboudreau614)                                        |                                       [Wes Jonke](https://github.com/Wjonke)                                        |
-| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | 
-|                      [<img src="https://avatars3.githubusercontent.com/u/51731995?s=400&v=4" width = "200" />](https://github.com/yennilee)                       |                      [<img src="https://avatars3.githubusercontent.com/u/54829403?s=400&v=4" width = "200" />](https://github.com/theolamide)                       |                      [<img src="https://avatars2.githubusercontent.com/u/49968389?s=400&v=4" width = "200" />](https://github.com/jeris-manning)                       |                      [<img src="https://avatars2.githubusercontent.com/u/46974548?s=400&v=4" width = "200" />](https://github.com/Mlira02)                       |                      [<img src="https://avatars0.githubusercontent.com/u/54781883?s=400&v=4" width = "200" />](https://github.com/tboudreau614)                       |                      [<img src="https://avatars3.githubusercontent.com/u/48270435?s=400&v=4" width = "200" />](https://github.com/Wjonke)                       |
-|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jennievan/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/daniel-ajadi-95b207197/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jerismanning/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/marcos-lira-837490186/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/tristan-boudreau-644b16168) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/wes-jonke/) |
 
 <br>
-<br>
+
 
 ## Project Overview
 
-Merch Dropper aims to solve, for creators and enterpreneurs, the hassle that comes with creating customized merchindize at a small scale. We aim to take the work away from you so you focus on what you do best, to create. We focus on recieveing the orders, shipping, payments collection, and all the nitty gritty for a fee. We are a plug and play one stop shop.
+Merch Dropper aims to solve, for creators and entrepreneurs, the hassle that comes with creating customized merchandise at a small scale. We aim to take the work away from you so you focus on what you do best, to create. We focus on receiving the orders, shipping, payments collection, and all the nitty-gritty for a fee. We are a plug and play one stop shop.
 
 ### Key Features
 
 -    Design Upload
--    Instant Product Mockup
--    Cloudinary image/product mockup storage functionality
+-    Instant Product Mock-up
+-    Cloudinary image/product mock-up storage functionality
 -    Easy and secure checkout
 
 ### [Front end] built using:
 
 #### ReactJS
-
-#### axios
-#### reactstrap
-#### styled-components
-#### redux 
-#### scaleable press
+#### Axios
+#### Reactstrap
+#### Styled-components
+#### Redux 
+#### Scalable Press
 #### cloudinary
-#### react-stripe-checkout
-#### react-stripe-elements
 
 
 #### [Back end] built using:
 
 #### NodeJS
-#### knex
-#### knex-cleaner
-#### postgreSQL
-#### express
-#### helmet
-#### jsonwebtoken
-#### bycryptJS
+#### Knex
+#### PostgreSQL
+#### Express
+#### JSON Web Tokens
+#### BcryptJS
 
 # APIs
 
