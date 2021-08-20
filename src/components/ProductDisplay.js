@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 import { connect } from "react-redux";
 import { addToCart } from "../store/actions";
 import styled from "styled-components";
-import { Container, Row, Col } from "reactstrap";
+import { Col } from "reactstrap";
 import "../App.css";
 
 const ProductDisplay = ({ products, addToCart }) => {
