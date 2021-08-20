@@ -8,7 +8,6 @@ import CheckoutPage from "./components/Cart/Checkout";
 import Home from "./components/Home.js";
 import ShoppingCart from "./components/Cart/ShoppingCart";
 import DesignShirt from "./components/Shirt/DesignShirt";
-import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
         path="/products"
         render={(props) => <ProductDisplay {...props} />}
       />
-      <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/designshirt" component={DesignShirt} />
       <Footer />
     </AppDiv>
