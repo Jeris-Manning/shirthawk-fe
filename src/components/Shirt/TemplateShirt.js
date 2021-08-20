@@ -33,7 +33,7 @@ const TemplateShirt = ({ garment }) => {
   return (
     <ShirtBox>
       <Design offset={offset} designSize={designSize} horizontal={horizontal}>
-        <img src={artwork} alt="" />
+        {artwork ? <img src={artwork} alt="" /> : <></>}
       </Design>
     </ShirtBox>
   );
@@ -42,25 +42,21 @@ const TemplateShirt = ({ garment }) => {
 export default TemplateShirt;
 
 const ShirtBox = styled.div`
-   {
-    width: 400px;
-    height: 485px;
-    // background-color: pink;
-    background-image: url(${bgShirt});
-    background-repeat: no-repeat;
-    background-position: bottom;
-    border: 1px black solid;
-    border-radius: 5px;
-    overflow: hidden;
-  }
+  width: 400px;
+  height: 485px;
+  background-image: url(${bgShirt});
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border: 1px black solid;
+  border-radius: 5px;
+  overflow: hidden;
 `;
 const Design = styled.div.attrs((props) => ({
   top: props.offset || "90px",
   width: props.designSize || "32px",
-  left: props.horizontal || "184px"
+  left: props.horizontal || "184px",
 }))`
   width: ${(props) => props.designSize};
-  // height: auto;
   position: relative;
   left: ${(props) => props.horizontal};
   top: ${(props) => props.offset};

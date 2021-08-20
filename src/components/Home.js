@@ -1,214 +1,151 @@
 import React from "react";
-import "../App.css";
-import {
-  Button,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  Jumbotron,
-  Container,
-  Media
-} from "reactstrap";
+import styled from "styled-components";
+import dude2 from "../images/blueGoose.png";
+import dude from "../images/oxblood.png";
+import { Link } from "react-router-dom";
 
-const Home = ({ history }) => {
+const Home = () => {
   return (
-    <div className="homepage" style={{ backgroundColor: "#F3F3F3" }}>
-      {/* Begin hero image */}
-      <div className="jumboParent">
-        <Jumbotron className="jumboCont">
-          <Container>
-            <Row>
-              <Col className="column" sm={{ size: "auto" }}>
-                <h1
-                  className="display-3 customh1"
-                  style={{ textAlign: "center", color: "white", fontWeight: "bold" }}
-                >
-                  CUSTOM
-                </h1>
-                <h2
-                  className="display-4 tshirth1"
-                  style={{ textAlign: "center", color: "white", fontWeight: "bold" }}
-                >
-                  T-SHIRTS
-                </h2>
-                <h1
-                  className="andMore"
-                  style={{ textAlign: "center", color: "white", fontWeight: "bold" }}
-                >
-                  AND MORE
-                </h1>
-                <div className="line2" />
-                <p
-                  className="p2"
-                  style={{ textAlign: "center", color: "white", fontWeight: "bold" }}
-                >
-                  Need merch? We've got your back.
-                </p>
-                <p className="p2" style={{ textAlign: "center", color: "white", margin: "5% 0" }}>
-                  Full service merchandising solutions from Merch Dropper and Scalable Press, no
-                  matter the size.
-                </p>
-                <p style={{ textAlign: "center" }}>
-                  <Button color="primary" className="letsGo" href="/designshirt">
-                    Let's Go!
-                  </Button>
-                  <br />
-                  <Button
-                    outline
-                    color="light"
-                    className="learnMore"
-                    onClick={() => {
-                      history.push("/learnmore");
-                    }}
-                  >
-                    Learn More
-                  </Button>
-                </p>
-              </Col>
-              <Col
-                className="customImg"
-                sm={{ size: "auto" }}
-                style={{ width: "25vw", height: "60vh", margin: "0 5vw" }}
-              >
-                <Media
-                  object
-                  src="https://i.ibb.co/wQWhj2C/Group-6.png"
-                  style={{ width: "15vw" }}
-                />
-                <Media
-                  object
-                  src="https://i.ibb.co/7XQ70x1/Group-5.png"
-                  style={{ width: "15vw" }}
-                />
-              </Col>
-            </Row>
-          </Container>
-        </Jumbotron>
-      </div>
-      {/* End hero image */}
-      {/* Begin featured shops section */}
-      <div style={{ width: "100vw" }} className="featuredDiv">
-        <Container
-          style={{
-            padding: "0 5%",
-            borderTop: "2px solid #026FC2",
-            borderLeft: "2px solid #026FC2",
-            borderTopLeftRadius: "10px"
-          }}
-        >
-          <Row>
-            <h1
-              className="mb-4 featuredText"
-              style={{
-                color: "#026FC2",
-                backgroundColor: "#F3F3F3",
-                marginTop: "-2%",
-                width: "25%",
-                textAlign: "center"
-              }}
-            >
-              Featured Shops
-            </h1>
-          </Row>
-          <Row style={{ width: "100%" }}>
-            <Media
-              object
-              src="https://i.ibb.co/HTvq2CY/image-6.png"
-              style={{ width: "30%", height: "10%" }}
-            />
-            <Media
-              object
-              src="https://i.ibb.co/XzjYthv/image-7.png"
-              style={{ width: "30%", height: "10%", margin: "0 5%" }}
-            />
-            <Media
-              object
-              src="https://i.ibb.co/vzsn9kf/image-9.png"
-              style={{ width: "30%", height: "10%" }}
-            />
-          </Row>
-        </Container>
-        <div>
-          <Row
-            style={{
-              width: "95vw",
-              display: "flex",
-              justifyContent: "space-evenly",
-              margin: "auto"
-            }}
-            className="mt-5 cards"
-          >
-            <Card className="cardCont">
-              <CardImg
-                top
-                width="100%"
-                src="https://i.ibb.co/zhpXpNy/Bg.png"
-                alt="Card image cap"
-                style={{ height: "70%" }}
-              />
-              <CardBody>
-                <CardTitle className="cardTitle">Kitten Mug</CardTitle>
-                <CardText className="cardText">Like cats? We make merch your way.</CardText>
-              </CardBody>
-            </Card>
-
-            <Card className="cardCont">
-              <CardImg
-                top
-                width="100%"
-                src="https://i.ibb.co/jH9JXZy/Image-2.png"
-                alt="Card image cap"
-                style={{ height: "70%" }}
-              />
-              <CardBody>
-                <CardTitle className="cardTitle" style={{ color: "#026FC2" }}>
-                  iPhone 11 Case
-                </CardTitle>
-                <CardText className="cardText">Like cats? We make merch your way.</CardText>
-              </CardBody>
-            </Card>
-
-            <Card className="cardCont">
-              <CardImg
-                top
-                width="100%"
-                src="https://i.ibb.co/6bnHXp2/Bg-1.png"
-                alt="Card image cap"
-                style={{ height: "70%" }}
-              />
-              <CardBody>
-                <CardTitle className="cardTitle" style={{ color: "#026FC2" }}>
-                  Adorable Jumper
-                </CardTitle>
-                <CardText className="cardText">Like cats? We make merch your way.</CardText>
-              </CardBody>
-            </Card>
-
-            <Card className="cardCont">
-              <CardImg
-                top
-                width="100%"
-                src="https://i.ibb.co/N1TNcJg/Screen-Shot-2020-02-05-at-11-15-1.png"
-                alt="Card image cap"
-                style={{ height: "70%" }}
-              />
-              <CardBody>
-                <CardTitle className="cardTitle" style={{ color: "#026FC2" }}>
-                  Fitted Tee
-                </CardTitle>
-                <CardText className="cardText">Like cats? We make merch your way.</CardText>
-              </CardBody>
-            </Card>
-          </Row>
-        </div>
-      </div>
-      {/* End featured shops section */}
-    </div>
+    <HomeBase>
+      <SplashTextDiv>
+        <h1>
+          <span className="line1">CUSTOM</span>
+          <br />
+          <span className="line2">T-SHIRTS</span>
+          <br />
+          <span className="line3">ON DEMAND</span>
+        </h1>
+        <div className="lineBreak" />
+        <h2>Need merch? We have your back.</h2>
+        <h3>
+          Full service merchandising solutions from Tee Hive and Scalable Press.
+        </h3>
+        <h3>No matter the size.</h3>
+        <Link>
+          <Button>Get Started!</Button>
+        </Link>
+      </SplashTextDiv>
+    </HomeBase>
   );
 };
 
 export default Home;
+
+const HomeBase = styled.div`
+  color: rgba(20, 20, 20, 0.9);
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  background-color: rgba(151, 193, 50, 0.75);
+  background-image: url(${dude2}), url(${dude});
+  background-position: 5% bottom, 96% bottom;
+  background-repeat: no-repeat;
+  background-size: auto 95%;
+  width: 100%;
+  height: calc(100vh - 70px);
+  @media (max-width: 1100px) {
+    background-image: url(${dude2});
+    background-position: 95% bottom;
+    justify-content: flex-start;
+  }
+  @media (max-width: 675px) {
+    background-size: auto 50%;
+    background-image: url(${dude2}), url(${dude});
+    background-position: 95% bottom, 5% bottom;
+    justify-content: center;
+  }
+`;
+
+const SplashTextDiv = styled.div`
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+  font-weight: 700;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 1100px) {
+    width: 50vw;
+    margin-top: 10px;
+  }
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .line1 {
+      font-size: 5rem;
+    }
+    .line2 {
+      font-size: 3.5rem;
+    }
+    .line3 {
+      font-size: 2rem;
+    }
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  h3 {
+    padding: 0 4rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  .lineBreak {
+    margin: 5% auto;
+    width: 70%;
+    border: 2px solid #3a6622;
+    border-radius: 10px;
+  }
+  @media (max-width: 675px) {
+    width: 90vw;
+    h1 {
+      justify-content: flex-start;
+      .line1 {
+        font-size: 4rem;
+        line-height: 2.2rem;
+      }
+      .line2 {
+        font-size: 3rem;
+        line-height: 1.8rem;
+      }
+      .line3 {
+        font-size: 2rem;
+        line-height: 1.4rem;
+      }
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px black;
+  color: #82e54c;
+  background: rgba(50, 50, 50, 0.8);
+  border: 2px solid black;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  height: 2.5rem;
+  font-size: 1.7rem;
+  text-decoration: none;
+
+  &:hover {
+    color: #1b2010;
+    background: #ccf200;
+    text-shadow: none;
+    text-decoration: none;
+  }
+`;

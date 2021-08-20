@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 import ProductCard from "./ProductCard";
 import { connect } from "react-redux";
 import { addToCart } from "../store/actions";
+import styled from "styled-components";
 import { Container, Row, Col } from "reactstrap";
 import "../App.css";
-
 
 const ProductDisplay = ({ products, addToCart }) => {
   // console.log('productdisplay/products', products)
   const [shirts, setShirts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://shirthawk.herokuapp.com/api/products')
-      .then(res => {
-        // console.log('res', res.data)
-        setShirts(res.data);
-      })
+    axios.get("https://shirthawk.herokuapp.com/api/products").then((res) => {
+      // console.log('res', res.data)
+      setShirts(res.data);
+    });
   }, []);
 
   return (
-    <Container fluid="true" className="container-margin">
-       {/*<NavBar />*/}
-      <Row>
+    <ProductDiv>
+      {/*<NavBar />*/}
+      <div className="shirtRow">
         <Col sm="7" className="flex ">
           {shirts.map((product, id) => (
             <ProductCard
@@ -35,8 +34,8 @@ const ProductDisplay = ({ products, addToCart }) => {
             />
           ))}
         </Col>
-      </Row>
-    </Container>
+      </div>
+    </ProductDiv>
   );
 };
 
@@ -44,11 +43,20 @@ const mapStateToProps = (state) => {
   // console.log("state in products", state);
   return {
     cart: state.CartReducer.cart,
-    products: state.ProductReducer.products
+    products: state.ProductReducer.products,
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { addToCart }
-)(ProductDisplay);
+export default connect(mapStateToProps, { addToCart })(ProductDisplay);
+
+const ProductDiv = styled.div`
+  height: calc(100vh - 105px);
+  margin-top: 30px;
+
+  .shirtRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+`;

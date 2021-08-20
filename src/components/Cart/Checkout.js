@@ -38,7 +38,7 @@ const CheckoutPage = ({ cartItems, total, addItem, removeItem, clearItem }) => (
       // <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       <CheckoutItemWrapper key={cartItem.id} className="checkout-item">
         <ImageWrapper className="image-container">
-          <ImageContainer src={cartItem.thumbnailURL} alt="item" />
+          <ImageContainer src={cartItem.fullSizeURL} alt="item" />
         </ImageWrapper>
         <DescriptionWrapper className="description">
           {cartItem.description}

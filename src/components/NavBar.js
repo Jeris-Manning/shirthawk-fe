@@ -4,11 +4,11 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import CartIcon from "./Cart/CartIcon.js";
 import CartDropDown from "./Cart/CartDropDown";
-import ant from "../images/merch.jpg";
+import ant from "../images/madAnt.png";
 
 const NavBar = ({ hidden, history }) => {
   return (
-    <div>
+    <NavDiv>
       <DesktopWrapper>
         <BrandWrapper>
           <BrandLogo
@@ -22,7 +22,7 @@ const NavBar = ({ hidden, history }) => {
             onClick={() => {
               history.push("/");
             }}>
-            Merch Dropper
+            TEE HIVE
           </BrandTitle>
         </BrandWrapper>
 
@@ -62,7 +62,7 @@ const NavBar = ({ hidden, history }) => {
 
         {hidden ? null : <CartDropDown />}
       </DesktopWrapper>
-    </div>
+    </NavDiv>
   );
 };
 
@@ -72,13 +72,24 @@ const mapStateToProps = (state) => ({
 
 export default withRouter(connect(mapStateToProps)(NavBar));
 
+const NavDiv = styled.div`
+  padding-top: 55px;
+
+  @media (max-width: 550px) {
+    padding-top: 40px;
+  }
+`;
+
 export const DesktopWrapper = styled.div`
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem;
-  background: white;
+  padding: 10px;
+  background: #3a6622;
   width: 100%;
+  position: fixed;
+  border-bottom: solid 2px #1b3010;
   @media (max-width: 550px) {
     padding: 2px;
   }
@@ -90,34 +101,31 @@ export const MobileWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 0.75rem;
-    background: white;
-    // border: 1px solid black;
+    background: rgb(86, 153, 50);
   }
 `;
 export const BrandWrapper = styled.div`
+  margin-left: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   @media (max-width: 768px) {
-    /* width: 30%; */
   }
-  /* @media (max-width: 411px) {
-    width: 49%;
-    justify-content: space-between;
-  } */
 `;
 export const BrandLogo = styled.img`
   cursor: pointer;
-  width: 2rem;
-  margin-right: 8px;
+  width: 50px;
+  margin-right: 15px;
 `;
 export const BrandTitle = styled.div`
-  color: #007bff;
-  font-weight: 700;
-  font-size: 2rem;
+  color: #82e54c;
+  font-family: "Jolly Lodger", cursive;
+  font-weight: 500;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
   cursor: pointer;
+  text-shadow: 2px 2px 3px black;
   @media (max-width: 550px) {
-    /* font-weight: 500; */
     font-size: 1.8rem;
   }
 `;
@@ -152,17 +160,16 @@ export const MobileButtonWrapper = styled.div`
 
 export const Button = styled.button`
   text-align: center;
-  color: white;
-  background: #037bff;
-  border: 1px solid #037bff;
+  color: #1b2010;
+  background: #82e54c;
+  border: 2px solid black;
   border-radius: 0.25rem;
-  /* width: 7rem; */
-  /* width: 20%; */
+  font-weight: 700;
   height: 2.25rem;
 
   &:hover {
-    background: #0369d9;
-    border: 1px solid #0369d9;
+    background: #ccf200;
+    border: 2px solid black;
   }
 `;
 export const MediaWrapper = styled.div`

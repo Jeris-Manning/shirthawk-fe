@@ -10,9 +10,7 @@ const MockImage = styled.img`
 
 const MockupDisplay = ({ garment }) => {
   return (
-    <div>
-      <MockImage src={garment.mockUrl} />
-    </div>
+    <div>{garment.mockUrl ? <MockImage src={garment.mockUrl} /> : <></>}</div>
   );
 };
 

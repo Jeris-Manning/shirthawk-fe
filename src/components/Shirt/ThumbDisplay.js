@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const PicDisplay = styled.div`
-    width: 320px;
+    /* width: 320px; */
     display: flex;
     flex-wrap: wrap;
     height: auto;

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import styled from "styled-components";
 import { Card, CardBody, CardTitle, CardText, CardImg, Col } from "reactstrap";
 import "../App.css";
 
@@ -21,12 +22,12 @@ const ProductCard = ({ product, addToCart }) => {
               <small className="text-muted">{product.name}</small>
             </CardText>
             <CardText>${product.price}</CardText>
-            <button
-              className="btn-primary cardBtn"
+            <Button
+              // className="btn-primary cardBtn"
               size="sm"
               onClick={() => addToCart(product)}>
               Add to Cart
-            </button>
+            </Button>
           </CardBody>
         </Card>
       </Col>
@@ -35,3 +36,20 @@ const ProductCard = ({ product, addToCart }) => {
 };
 
 export default ProductCard;
+
+const Button = styled.button`
+  text-align: center;
+  color: #1b2010;
+  background: #82e54c;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  height: 2.25rem;
+  margin-bottom: 8px;
+
+  &:hover {
+    background: #ccf200;
+    border: 2px solid black;
+    color: black;
+  }
+`;

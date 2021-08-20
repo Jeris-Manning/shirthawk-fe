@@ -13,10 +13,10 @@ const DesignShirt = () => {
   const [garment, setGarment] = useState(initialShirtState.garment);
   const [thumbRender, setThumbRender] = useState();
 
-  const handleScalableMockup = function() {
+  const handleScalableMockup = function () {
     HandleScalableMockup(garment, setGarment);
   };
-  const addProduct = function() {
+  const addProduct = function () {
     AddProduct(garment);
   };
 
@@ -43,10 +43,12 @@ const DesignShirt = () => {
 export default DesignShirt;
 
 const DesignShirtContainer = styled.div`
+  height: calc(100vh - 105px);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1200px;
-  margin-top: 15px;
+  margin-top: 50px;
+  /* background: rgba(151, 193, 50, 0.75); */
 `;

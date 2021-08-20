@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -13,7 +14,7 @@ import LearnMore from "./components/LearnMore";
 
 function App() {
   return (
-    <div className="App">
+    <AppDiv>
       <NavBar />
       <Route exact path="/" component={Home} />
       <Route exact path="/cart" component={ShoppingCart} />
@@ -21,7 +22,7 @@ function App() {
       <Route
         exact
         path="/products"
-        render={props => <ProductDisplay {...props} />}
+        render={(props) => <ProductDisplay {...props} />}
       />
       <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/signup" component={SignUp} />
@@ -29,8 +30,12 @@ function App() {
       <Route exact path="/learnmore" component={LearnMore} />
       {/* <ImageUpload /> */}
       <Footer />
-    </div>
+    </AppDiv>
   );
 }
 
 export default App;
+
+const AppDiv = styled.div`
+  background: rgba(151, 193, 50, 0.75);
+`;

@@ -29,8 +29,13 @@ const SwatchBox = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 300px;
+  width: 260px;
   margin-bottom: 15px;
+  padding: 10px 0;
+  border-radius: 12px;
+  border: solid black 2px;
+  background: #eee;
+  justify-content: center;
 
   a:focus {
     outline: solid 1px black;
@@ -40,9 +45,9 @@ const SwatchBox = styled.div`
 const SwatchSquare = styled.div`
   width: 20px;
   height: 20px;
-  margin: 1px;
-  border: solid 1px #ccc;
-  border-radius: 3px;
+  margin: 2px;
+  border: solid 1px black;
+  border-radius: 1px;
 `;
 
 const colors = [
