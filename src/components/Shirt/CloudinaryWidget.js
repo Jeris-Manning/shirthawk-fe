@@ -33,7 +33,7 @@ const ImageUpload = ({ design, setDesign, designAdded, setDesignAdded }) => {
   return (
     <Fragment>
       <button className="designBtn btn btn-primary" onClick={showWidget}>
-        Upload New Design
+        Upload Custom Art
       </button>
     </Fragment>
   );

@@ -17,67 +17,78 @@ const DesignInputPanel = ({
 }) => {
   return (
     <Panel>
-      <div className="centerDiv">
-        <DesignHandler
-          design={design}
-          setDesign={setDesign}
-          setThumbRender={setThumbRender}
-        />
+      <div>
+        <h2 className="chooseDesign">Choose a Design</h2>
+        <div className="centerDiv thumbs">
+          <ThumbDisplay
+            garment={garment}
+            setGarment={setGarment}
+            thumbRender={thumbRender}
+          />
+        </div>
       </div>
-      <div className="centerDiv">
-        <ThumbDisplay
-          garment={garment}
-          setGarment={setGarment}
-          thumbRender={thumbRender}
-        />
-      </div>
+      <div>
+        <div className="centerDiv artUpload">
+          <DesignHandler
+            design={design}
+            setDesign={setDesign}
+            setThumbRender={setThumbRender}
+          />
+        </div>
+        <div className="centerDiv">
+          <Swatch garment={garment} setGarment={setGarment} />
+        </div>
 
-      <div className="centerDiv">
-        <Swatch garment={garment} setGarment={setGarment} />
+        <ButtonContainer>
+          <button onClick={handleScalableMockup}>
+            See Your Shirt On A Model
+          </button>
+          <button onClick={addProduct}>Put It Up For Sale!</button>
+        </ButtonContainer>
       </div>
-
-      <ButtonContainer>
-        <button
-          // className="designBtn btn btn-primary"
-          onClick={handleScalableMockup}>
-          Preview Design
-        </button>
-        <button
-        // className="designBtn btn btn-primary"
-        onClick={addProduct}>
-          Add To Store
-        </button>
-      </ButtonContainer>
     </Panel>
   );
 };
 
 export default DesignInputPanel;
 
-const ButtonContainer = styled.div`
-  // padding: 10px;
-  display: flex;
-  width: 250px;
-  align-self: center;
-  flex-direction: column;
-  justify-content: space-between;
-`;
 const Panel = styled.div`
   background: #777;
   height: auto;
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   justify-content: space-between;
+  align-items: center;
   margin: 20px 0 0 15px;
   width: 285px;
-  padding: 15px 5px;
+  padding: 0;
   border: solid #333 2px;
   border-radius: 5px;
   height: 620px;
   max-height: 70vh;
+
+  .chooseDesign {
+    font-family: robot, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 281px;
+    text-align: center;
+    padding: 8px 0;
+    border-bottom: solid black 2px;
+    background-color: #82e54c;
+    border-radius: 3px 3px 0 0;
+  }
+
   .centerDiv {
-    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+  .artUpload {
+    margin-bottom: 5px;
+  }
+  .thumbs {
+    min-height: 120px;
+    margin: 5px 0;
   }
 
   button {
@@ -88,7 +99,8 @@ const Panel = styled.div`
     border-radius: 0.25rem;
     font-weight: 700;
     height: 2.25rem;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    width: 88%;
 
     &:hover {
       background: #ccf200;
@@ -96,4 +108,12 @@ const Panel = styled.div`
       color: black;
     }
   }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 `;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Swatch = ({ garment, setGarment }) => {
   return (
     <SwatchBox>
+      <h2 className="shirtColor">Choose a Shirt Color</h2>
       {colors.map((color, index) => (
         <a href="#section" key={index}>
           <SwatchSquare
@@ -30,12 +31,25 @@ const SwatchBox = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 260px;
-  margin-bottom: 15px;
-  padding: 10px 0;
+  padding-bottom: 10px;
   border-radius: 12px;
   border: solid black 2px;
   background: #eee;
   justify-content: center;
+  margin-bottom: 12px;
+
+  .shirtColor {
+    font-family: robot, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 260px;
+    text-align: center;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    border-bottom: solid black 2px;
+    background-color: #82e54c;
+    border-radius: 10px 10px 0 0;
+  }
 
   a:focus {
     outline: solid 1px black;
@@ -145,5 +159,5 @@ const colors = [
   ["Heather Sea Green", "#A5ECEE"],
   ["Heather Ice Blue", "#E0F1F5"],
   ["Rust", "#A03033"],
-  ["Heather Peach", "#F1D9C1"]
+  ["Heather Peach", "#F1D9C1"],
 ];
