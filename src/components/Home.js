@@ -21,7 +21,7 @@ const Home = () => {
           Full service merchandising solutions from Tee Hive and Scalable Press.
         </h3>
         <h3>No matter the size.</h3>
-        <Link>
+        <Link to="/designShirt">
           <Button>Get Started!</Button>
         </Link>
       </SplashTextDiv>
